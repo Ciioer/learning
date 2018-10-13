@@ -23,6 +23,7 @@ public class ABCTest {
                     System.out.print(name);
                     index++;
                     i++;
+                    abcTest.notifyAll();
                 }
             }
         }
@@ -47,13 +48,14 @@ public class ABCTest {
                     System.out.print(name);
                     index++;
                     i++;
+                    abcTest.notifyAll();
                 }
             }
         }
     }
     public static void main(String[] args){
-        ThreadA threadA =new ThreadA("A",3);
-        ThreadB threadB =new ThreadB("B",3);
+        ThreadA threadA =new ThreadA("A",5);
+        ThreadB threadB =new ThreadB("B",5);
         Thread thA =new Thread(threadA);
         Thread thB =new Thread(threadB);
         thA.start();
