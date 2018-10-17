@@ -1,7 +1,7 @@
 package MyTest.Multithreading;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-public class Test {
+public class ABCTest2 {
     private static Lock lock = new ReentrantLock();// 通过JDK5中的Lock锁来保证线程的访问的互斥
     private static int state = 0;//通过state的值来确定是否打印
 
